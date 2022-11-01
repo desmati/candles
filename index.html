@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://unpkg.com/d3@7.6.1/dist/d3.min.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <style>
+        #container {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div>
+        <p>Select local CSV File:</p>
+        <b>The format should be: </b><span>YYYY.MM.DD,HH:mm,O,H,L,C,V</span>
+        <br>
+        <b>For example: </b><span>2021.01.03,18:00,1904.998000,1910.898000,1903.288000,1909.718000,0</span>
+        <br>
+        <b>It will use last n elements: </b><input type="text" value="100" id="lastN">
+        <hr>
+
+        <input id="csv" type="file" accept=".csv">
+    </div>
+    <div id="container"></div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
